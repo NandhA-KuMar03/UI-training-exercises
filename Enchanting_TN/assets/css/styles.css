@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+img {
+    width: 100%;
+}
+header{
+    background-color: rgb(61,22,60);
+    text-align: center;
+    padding: 48px;
+}
+.img_ht {
+    height: 880px;
+}
+/* Title of the page */
+header > h1{
+    color: white ;
+    font-size: 37px;
+}
+/* Card title */
+.title_description {
+    font-weight: 300;
+    font-size: 36px;;
+}
+/* Cards parent container */
+.box_container {
+    width: 88%;
+    margin: 65px auto 75px auto;
+}
+/* Card content */
+.box_container p{
+    color: #000000;
+    padding: 10px 0px 22px 0px;
+}
+.box_container h3{
+    color: #000000;
+    /* font-weight: 100; */
+    padding: 10px 0px;
+}
+
+.box_container h4{
+    color: #000000;
+    padding: 10px 0px;
+}
+.description {
+    font-weight: 100;
+    padding: 2px;;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.txt_bold {
+    font-size: large;
+     font-weight: bolder;
+}
+/* Columns divider */
+.cols {
+    padding: 10px;
+    display: inline-block;
+    width: 31.75%;
+}
+button {
+    font-size: 16px;
+    padding: 12px 23px;
+    color: #ffffff;
+    border-style: unset;
+    font-weight: 100;
+    background-color:  #7a1655;
+}
+/* Article section content */
+.paragraph_container {
+    width: 75%;
+    margin: auto;
+    font-size: 29px;
+    color:#44133f;
+    text-align: justify;
+    padding-bottom: 80px;
+}
+footer { 
+    height: 65px;
+    padding: 18px;
+    background-color: #7b1857;
+}
+.article_heading {
+    text-align: center; 
+    font-size: 70px; 
+    font-weight: 100; 
+    color: #7b1857; 
+    padding-bottom: 50px;
+}
+.line_ht {
+    font-weight: lighter;
+    line-height: 46px;
+}
+.box_container > p {
+    color: #ffffff;
+    line-height: 2px ;
+}
+footer .box_container{
+    margin: auto;
+}
+.footer_note{
+    padding: 17px 0 10px 0 ;
+    font-size: larger;
+    font-weight: 600;
+}
