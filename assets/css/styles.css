@@ -1,0 +1,70 @@
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: #145f94;
+    color: #ffffff;
+} 
+/* Title of the document  */
+h1{
+    font-weight: 500;
+    font-size: 20px;
+}
+.parent_container{
+    width: 83.5%;
+    margin: 2.5% auto;
+}
+
+/* Card titles */
+h4{
+    font-size: 21px;
+    font-weight: 400;
+    background-color: #145f94;
+    padding: 16px 25px;
+    color: #ffffff;
+}
+.left_container{
+    float:left; 
+    margin: 0.7%;
+    width:60%;
+}
+.right_container {
+    float: right ; 
+    margin: 0.7%;
+    width : 37%;
+}
+/* Border for each card */
+.border{
+    background-color: hsl(0deg 0% 96%);
+    font-size: large;
+    line-height: 25px;
+    text-align: justify;
+    border: 1px solid hwb(205 8% 42%);
+}
+.card{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Card description */
+p{
+    padding: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .left_container{
+        width: 100%;
+    }
+    .right_container{
+        width: 100%;
+    }
+  }
+
+  
+
+ 
