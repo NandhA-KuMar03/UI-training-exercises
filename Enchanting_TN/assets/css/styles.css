@@ -2,62 +2,60 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-img {
-    width: 100%;
-}
 header{
-    background-color: rgb(61,22,60);
+    background-color: #3d163c;
     text-align: center;
     padding: 48px;
+}
+/* Title of the page */
+header > h1{
+    color: #ffffff ;
+    font-size: 37px;
 }
 .img_ht {
     height: 880px;
 }
-/* Title of the page */
-header > h1{
-    color: white ;
-    font-size: 37px;
-}
-/* Card title */
-.title_description {
-    font-weight: 300;
-    font-size: 36px;;
-}
 /* Cards parent container */
 .box_container {
     width: 88%;
-    margin: 65px auto 75px auto;
-}
-/* Card content */
-.box_container p{
-    color: #000000;
-    padding: 10px 0px 22px 0px;
-}
-.box_container h3{
-    color: #000000;
-    /* font-weight: 100; */
-    padding: 10px 0px;
-}
-
-.box_container h4{
-    color: #000000;
-    padding: 10px 0px;
-}
-.description {
-    font-weight: 100;
-    padding: 2px;;
-    font-size: 20px;
-    line-height: 1.2;
-}
-.txt_bold {
-    font-size: large;
-     font-weight: bolder;
+    margin: 65px auto 75px;
 }
 /* Columns divider */
 .cols {
     padding: 10px;
     display: inline-block;
     width: 31.75%;
+}
+.cols img{
+    width: 100%;
+}
+/* Card title */
+.title_description {
+    font-weight: 300;
+    font-size: 36px;
+}
+/* Card content */
+.box_container h3{
+    color: #000000;
+    padding: 10px 0;
+}
+.box_container h4{
+    color: #000000;
+    padding: 10px 0;
+}
+.box_container p{
+    color: #000000;
+    padding: 10px 0 22px;
+}
+.description {
+    font-weight: 100;
+    padding: 2px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.txt_bold {
+    font-size: large;
+     font-weight: bolder;
 }
 button {
     font-size: 16px;
@@ -76,11 +74,6 @@ button {
     text-align: justify;
     padding-bottom: 80px;
 }
-footer { 
-    height: 65px;
-    padding: 18px;
-    background-color: #7b1857;
-}
 .article_heading {
     text-align: center; 
     font-size: 70px; 
@@ -92,15 +85,20 @@ footer {
     font-weight: lighter;
     line-height: 46px;
 }
-.box_container > p {
-    color: #ffffff;
-    line-height: 2px ;
+footer { 
+    height: 65px;
+    padding: 18px;
+    background-color: #7b1857;
 }
 footer .box_container{
     margin: auto;
 }
 .footer_note{
-    padding: 17px 0 10px 0 ;
+    padding: 17px 0 10px;
     font-size: larger;
     font-weight: 600;
+}
+.box_container > p {
+    color: #ffffff;
+    line-height: 2px ;
 }
