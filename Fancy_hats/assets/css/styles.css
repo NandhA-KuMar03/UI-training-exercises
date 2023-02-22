@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
+}
+/* Applying image in the background */
+body{
+    background-image: url("../images/background-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+.title{
+    font-size: 75px; 
+    padding: 30px;
+}
+/* Menu button for hover action */
+.menu{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top : 40px;
+    left: 0;
+    font-size: 45px;
+    padding: 28px;
+    color: #ffffff;
+    background-color: #000000;
+}
+.dropdown{
+    position: absolute;
+    background-color: black;
+    transform: translate(-600px);
+    color: #ffffff;
+    width: 16%;
+    height: 750px;
+    padding: 25px;
+    top: 140px;
+    border-radius: 10px;
+    transition-property: transform;
+    transition-duration: 3s;
+}
+.dropdown li{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 200;
+    list-style: none;
+    text-align: center;
+    padding: 12px 10px; 
+    font-size: large;
+}
+.menu:hover ~ .dropdown{
+    transform: translate(-5px); 
+    }
+/* Variable font sizes */
+span{
+    font-size: 125px;
+}
+h1{
+    width: 50%;
+    margin: 15% 35% 0;
+    font-size: 100px;
+    left: 35%;
+    align-content: space-between;
+    top: 70%;
+    padding: 30px;
+}
+h3{
+    transform: rotate(-90deg);
+    width: max-content;
+    font-size: xx-large;
+    margin: 0 0 0 83%;
+}
+/* Icon color */
+i{
+    color: #ffffff;
+}
+.icons{
+    display: inline-block;
+    margin: 20px 0 20px 92%;
+    font-size: xx-large;
+    padding: 15px;
+}
+/* Contents which are needed for transparent_background */
+.transparent_background{
+    color: #ffffff;
+    background-color: transparent;
+}
