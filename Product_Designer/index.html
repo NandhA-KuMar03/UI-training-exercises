@@ -9,52 +9,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <link href="assets/css/styles.css" rel="stylesheet">
+    <title>Product Designer</title>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Mail id -->
-    <div class="mail">shruthi.bhatt@siriuscom.com</div>
-
-    <!-- Header Part -->
+    <nav>
+        <!-- Mail id -->
+        <div class="mail">shruthi.bhatt@siriuscom.com</div>
+    </nav>
     <header class="header_container">
-        <div class="header_child">
+        <!-- Header Part -->
+        <div class="developer_details">
             <h1>
-                <span class="thin">Shruthi</span><span class="thick"> Bhatt</span> 
+                <span class="developer_firstname">Shruthi</span><span class="developer_lastname"> Bhatt</span> 
             </h1>
         </div>
-        <div class="header_child">
+        <div class="developer_details">
             <h5>
-                a <span class="product">product</span> designer
+                a <span class="developer_designation">product</span> designer
             </h5>
         </div>
+        <div class="developer_details">
+            <h6>shruthi.bhatt@siriuscom.com</h6>
+        </div>
     </header>
-
 
     <main>
         <!-- Images in grid like system -->
         <div class="parent_container">
-            <div class="image">
-                <img src="assets/images/card1.png" alt="Image1">
+            <div class="flexbox_images">
+                <img src="assets/images/card1.png" alt="Phone camera">
             </div>
-            <div class="image">
-                <img src="assets/images/card2.png" alt="Image2">
+            <div class="flexbox_images">
+                <img src="assets/images/card2.png" alt="Cutlery">
             </div>
-            <div class="image">
-                <img src="assets/images/card3.png" alt="Image3">
+            <div class="flexbox_images">
+                <img src="assets/images/card3.png" alt="Gallery">
             </div>
-            <div class="image">
-                <img src="assets/images/card4.png" alt="Image4">
+            <div class="flexbox_images">
+                <img src="assets/images/card4.png" alt="Gadget stand">
             </div>
-            <div class="image">
-                <img src="assets/images/card5.png" alt="Image5">
+            <div class="flexbox_images">
+                <img src="assets/images/card5.png" alt="Oculus rift">
             </div>
-            <div class="image">
-                <img src="assets/images/card6.png" alt="Image6">
+            <div class="flexbox_images">
+                <img src="assets/images/card6.png" alt="Alexa">
             </div>
         </div>
-        <h4>
+        <h4 class="logos_title">
             Big names to <span>show off</span>
         </h4>
 
@@ -62,26 +64,26 @@
         <section class="section_container">
             <div><img src="assets/images/spotify.png" alt="Spotify"></div>
             <div><img src="assets/images/audi.png" alt="Audi"></div>
-            <div><img src="assets/images/adidas.png" alt="adidas"></div>
+            <div><img src="assets/images/adidas.png" alt="adidas" class="image_resize"></div>
             <div><img src="assets/images/lufthansa.png" alt="lufthansa"></div>
             <div><img src="assets/images/ikea.png" alt="ikea"></div>
-            <div><img src="assets/images/mont_blanc.png" alt="mont_blanc"> </div>
+            <div><img src="assets/images/mont_blanc.png" alt="mont_blanc" class="image_resize"> </div>
         </section>
     </main>
-
 
     <!-- Footer part -->
     <footer class="footer_container">
         <div class="line_container">
-            <p>____</p>
-            <p>_______________________</p>
+            <div class="line1">
+            </div>
+            <div class="line2"></div>
         </div>
         <div class="icons_container">
-            <div><i class="fa fa-facebook fa-inverse"></i></div>
-            <div><i class="fa fa-twitter fa-inverse"></i></div>
-            <div><i class="fa fa-instagram fa-inverse"></i></div>
-            <div><i class="fa-brands fa-dribbble"></i></div>
-            <div><i class="fa-solid fa-m"></i></div>
+            <div class="icons_border"><i class="fa fa-facebook fa-inverse"></i></div>
+            <div class="icons_border"><i class="fa fa-twitter fa-inverse"></i></div>
+            <div class="icons_border"><i class="fa fa-instagram fa-inverse"></i></div>
+            <div class="icons_border"><i class="fa-brands fa-dribbble"></i></div>
+            <div class="icons_border"><i class="fa-solid fa-m"></i></div>
         </div>
         <p>Coded with Love & Passion</p>
     </footer>
