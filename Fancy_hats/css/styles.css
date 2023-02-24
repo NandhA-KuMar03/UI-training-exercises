@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/* Applying image in the background */
+body{
+    background-image: url("/assets/images/background-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header_section{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+/* Contents which are needed for transparent_background */
+.transparent_background{
+    background-color: transparent;
+    color: #ffffff;
+}
+.title{
+    padding: 30px;
+    transform: scaleY(1.2);
+    font-size: 75px; 
+}
+/* Menu button for hover action */
+.menu{
+    position: absolute;
+    top : 40px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    padding: 28px;
+    font-size: 45px;
+    color: #ffffff;
+    background-color: #000000;
+}
+.dropdown{
+    position: absolute;
+    top: 140px;
+    width: 16%;
+    height: 750px;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: black;
+    color: #ffffff;
+    transform: translate(-280px);
+    transition-property: transform;
+    transition-duration: 3s;
+}
+.dropdown li{
+    padding: 12px 15px; 
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    /* transform: scaleY(1.2); */
+    font-weight: 400;
+    font-size: large;
+}
+.dropdown li img{
+    object-fit: contain;
+    /* transform: sc; */
+}
+.menu:hover ~ .dropdown{
+    transform: translate(-22px); 
+    }
+/* Variable font sizes */
+.origin_year{
+    margin: 25px 0 0 85.2%;
+    width: max-content;
+    transform: rotate(-90deg) scaleY(1.2) scaleX(1.2);
+    font-size: 30px;
+}
+.origin_year span{
+    font-size: 100px;
+}
+.fancy_hats_motto span{
+    margin-top: -20px;
+    line-height: 0.8;
+    font-size: 100px;
+}
+.fancy_hats_motto{
+    margin: 20% 35% 0;
+    width: 50%;
+    padding: 30px;
+    font-size: 100px;
+    transform: scaleY(1.2) scaleX(1.1);
+}
+.fancy_hats_motto span{
+    font-size: 132px;
+}
+
+/* Icon color */
+i{
+    color: #ffffff;
+}
+.social_media_icons{
+    position: absolute;
+    bottom: 20px;
+    right: 35px;
+    font-size: 40px;
+}
