@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' , 'sans-serif';
+}
+img{
+    max-width: 100%;
+}
+body{
+    background-color: rgb(42,43,48);
+}
+header{
+    width: 82%;
+    margin: auto;
+    padding: 60px 0 40px;
+}
+header .image{
+    display: inline-block;
+    width: 13%;
+}
+.mainco{
+    float: right;
+    margin-right: 25px;
+ } 
+.drpo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 26px;
+    background-color: rgb(216,216,216);
+}
+.mainco:hover .dropdown{
+    display: inline-block;
+    right: 175px;
+    z-index: 1;
+    width: 250px;
+    position: absolute;
+ }
+
+ .dropdown{
+    position: absolute;
+    border: solid;
+    top: 145px;
+    right: 90px;
+    padding: 12px;
+    display: none;
+    background-color: aliceblue;
+ }
+ .dropdown div{
+    padding: 7px;
+    background-color: aliceblue;
+ }
+ .dropdown a{
+    text-decoration: none;
+    color: black;
+    background-color: aliceblue;
+ }
+.card_image i{
+    /* background-color: rgb(36,37,42); */
+    color:  rgb(135,177,131);
+}
+.card_image img{
+    margin-top: 30px;
+    max-height: 256px;
+}
+ .img1{
+/* height: 25px; */
+text-align: center;
+ }
+ .img2{
+    text-align: center;
+    /* height: 30px; */
+ }
+
+ .card_title{
+    font-weight: 400;
+    font-size: 25px;
+    padding: 10px 0;
+    color: white;
+ }
+ .div1 p{
+    padding: 0  0 10px;
+    color: #979797;
+    font-size: 20px;
+ }
+ .div1 button{
+    /* border-style: unset ; */
+    border: 1px solid #979797;
+    background-color: rgb(42,43,48);;
+    /* width: 160px; */
+    color: #979797;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 25px;
+ }
+
+.parent_container{
+    /* display: flex; */
+    padding: 20px;
+    /* border: 2px solid; */
+    width: 85%;
+    margin: auto;
+}
+.div1{
+    width: 22.6%;
+    margin: 0 30px 60px 0;
+    display: inline-block;
+    /* border: 2px solid yellow; */
+}
+.card_image{
+    /* background-color: rgb(36,37,42); */
+    background-color: rgb(36,37,42);
+    position: relative;
+    padding: 40px 20px;
+    /* border: 2px blue solid; */
+    height: 397px;
+}
+/* .card_image img{
+    min-height: 95%;
+} */
+.div1 i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size:20px;
+}
+.size{
+    padding: 12px;
+    position: absolute;
+    right: 20px;
+    top: 365px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(135,177,129);
+}
+.size div{
+    background-color: rgb(135,177,129);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+footer{
+    position: fixed;
+    background-color: black;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    color: white;
+    text-align: center;
+ }
+ footer div{
+    font-size: x-large;
+    background-color: black;
+    display: inline-block;
+    padding: 30px;
+ }
