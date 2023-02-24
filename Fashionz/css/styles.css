@@ -7,151 +7,145 @@ img{
     max-width: 100%;
 }
 body{
-    background-color: rgb(42,43,48);
+    background-color: #2a2b30;
 }
 header{
-    width: 82%;
-    margin: auto;
     padding: 60px 0 40px;
+    margin: auto;
+    width: 86%;
 }
-header .image{
-    display: inline-block;
+header .logo_container{
     width: 13%;
+    display: inline-block;
 }
-.mainco{
+.dropdown_container{
     float: right;
-    margin-right: 25px;
  } 
-.drpo{
+ .clearfix{
+    clear: both;
+ }
+.hover_icon{
+    margin-bottom: 26px;
+    border-radius: 50%;
     width: 70px;
     height: 70px;
-    border-radius: 50%;
-    margin-bottom: 26px;
-    background-color: rgb(216,216,216);
+    background-color: #d8d8d8;
 }
-.mainco:hover .dropdown{
-    display: inline-block;
-    right: 175px;
+.dropdown_container:hover .hover_items{
+    /* position: absolute; */
+    right: 115px;
     z-index: 1;
+    top: 75px;
     width: 250px;
-    position: absolute;
+    display: inline-block;
  }
-
- .dropdown{
-    position: absolute;
-    border: solid;
+.regular{ 
+    z-index: 4;
+ } 
+ .hover1{
+    z-index: -1;
+ }
+ .regular:hover ~ .hover1{
+    background-color: #87b183;
+ }
+ .hover_items{
+    display: none;
+    position: relative;
     top: 145px;
     right: 90px;
     padding: 12px;
-    display: none;
-    background-color: aliceblue;
+    border: solid;
+    background-color: #f0f8ff;
  }
- .dropdown div{
+ .hover_items div{
     padding: 7px;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
  }
- .dropdown a{
+ .hover_items a{
     text-decoration: none;
-    color: black;
-    background-color: aliceblue;
+    color: #000000;
+    background-color: #f0f8ff;
  }
-.card_image i{
-    /* background-color: rgb(36,37,42); */
-    color:  rgb(135,177,131);
-}
-.card_image img{
-    margin-top: 30px;
-    max-height: 256px;
-}
- .img1{
-/* height: 25px; */
-text-align: center;
- }
- .img2{
-    text-align: center;
-    /* height: 30px; */
- }
-
- .card_title{
-    font-weight: 400;
-    font-size: 25px;
-    padding: 10px 0;
-    color: white;
- }
- .div1 p{
-    padding: 0  0 10px;
-    color: #979797;
-    font-size: 20px;
- }
- .div1 button{
-    /* border-style: unset ; */
-    border: 1px solid #979797;
-    background-color: rgb(42,43,48);;
-    /* width: 160px; */
-    color: #979797;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 10px 25px;
- }
-
-.parent_container{
-    /* display: flex; */
+ .parent_container{
     padding: 20px;
-    /* border: 2px solid; */
-    width: 85%;
     margin: auto;
+    width: 90%;
 }
-.div1{
-    width: 22.6%;
-    margin: 0 30px 60px 0;
+.card_container{
+    margin: 0 15px 60px;
+    width: 22.8%;
     display: inline-block;
-    /* border: 2px solid yellow; */
 }
-.card_image{
-    /* background-color: rgb(36,37,42); */
-    background-color: rgb(36,37,42);
+.card_image_container{
     position: relative;
-    padding: 40px 20px;
-    /* border: 2px blue solid; */
     height: 397px;
+    padding: 40px 20px;
+    background-color: #24252a;
 }
-/* .card_image img{
-    min-height: 95%;
-} */
-.div1 i{
+.card_container i{
     position: absolute;
     right: 20px;
     top: 20px;
     font-size:20px;
 }
+.card_image_container i{
+    color:  #87b183;
+}
+.image_wrapper {
+    width: max-content;
+    margin: auto;
+    margin-top: 12%;
+}
+.card_image_container img{
+    max-height: 256px;
+}
+
 .size{
-    padding: 12px;
     position: absolute;
     right: 20px;
-    top: 365px;
+    /* top: 365px; */
+    bottom: -23px;
+    padding: 12px;
     width: 50px;
-    height: 50px;
+    text-align: center;
     border-radius: 50%;
-    background-color: rgb(135,177,129);
-}
-.size div{
-    background-color: rgb(135,177,129);
+    height: 50px;
     font-weight: 500;
     font-size: 22px;
+    background-color: #87b181;
 }
+ .card_title{
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 25px;
+    color: #ffffff;
+ }
+ .card_container p{
+    padding: 0  0 10px;
+    color: #979797;
+    font-size: 20px;
+ }
+ .card_container .add_to_cart{
+    padding: 10px 25px;
+    border: 1px solid #979797;
+    background-color: rgb(42,43,48);;
+    color: #979797;
+    font-size: 15px;
+    font-weight: 700;
+ }
 
 footer{
     position: fixed;
-    background-color: black;
     bottom: 0;
     height: 10%;
     width: 100%;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
  }
  footer div{
-    font-size: x-large;
-    background-color: black;
     display: inline-block;
-    padding: 30px;
+    padding: 35px;
+    font-size: 22px;
+    background-color: black;
  }
