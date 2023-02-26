@@ -32,21 +32,11 @@ header .logo_container{
     background-color: #d8d8d8;
 }
 .dropdown_container:hover .hover_items{
-    /* position: absolute; */
     right: 115px;
-    z-index: 1;
+    z-index: 10;
     top: 75px;
     width: 250px;
     display: inline-block;
- }
-.regular{ 
-    z-index: 4;
- } 
- .hover1{
-    z-index: -1;
- }
- .regular:hover ~ .hover1{
-    background-color: #87b183;
  }
  .hover_items{
     display: none;
@@ -82,9 +72,19 @@ header .logo_container{
     padding: 40px 20px;
     background-color: #24252a;
 }
+
+
+
+.hover1{
+    visibility: hidden;
+}
+.star_hover:hover  ~ .hover1{
+    visibility: visible;
+}
+
 .card_container i{
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 20px;
     font-size:20px;
 }
