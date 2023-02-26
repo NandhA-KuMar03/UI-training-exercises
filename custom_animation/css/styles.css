@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+.image_wrapper{
+    width: 55%;
+    margin: 20px auto;
+}
+
+/* styles for container which has like comment and share */
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin: 20px auto;
+    width: 55%;
+    height: 100px;
+    background-color: #ff0000;
+    font-size: 40px;
+}
+.like{
+    display: inline-block;
+    width: 25%;
+    background: linear-gradient(to left, #ff0000 50%, #ffff00 50%) right;
+    background-size: 200% 100%;
+    transition: .5s ease-out;  
+}
+.like span{
+    color: #ff0000;
+}
+/* Like icon hover  */
+.like i:hover{
+    background-position: left bottom;
+    background-position: left;
+    cursor: pointer;
+    animation: like_animation 1s forwards linear;
+}
+.like:hover{
+    background-position: left;
+}
+/* like animation */
+@keyframes like_animation {
+    0%   {
+        transform: scale(1) rotate(-15deg);
+    }
+    25%  {
+        transform: scale(2) rotate(-30deg);
+    }
+    50%  {
+        transform: scale(3) rotate(-45deg);
+    }
+    75% {
+        transform: scale(2) rotate(-30deg);
+    }
+    90% {
+        transform: scale(1.5) rotate(-15deg); 
+    }
+    100% {
+        transform: scale(1) rotate(0deg) ;
+    }
+}
+
+.comment{
+    width: 25%;
+    text-align: center;
+}
+/* comment hover */
+.comment i:hover{
+    cursor: pointer;
+    animation: comment_animation 1s forwards linear;
+}
+.comment:hover ~ .comment_box{
+    background-color: #ff0000;
+    visibility: visible;
+}
+/* comment animation */
+@keyframes comment_animation {
+    0%   {
+        transform: scale(1) translateY(5px);
+    }
+    25%  {
+        transform: scale(2) translateY(15px);
+    }
+    50%  {
+        transform: scale(3) translateY(20px);
+    }
+    75% {
+        transform: scale(2) translateY(15px);
+    }
+    90% {
+        transform: scale(1.5) translateY(10px);
+    }
+    100% {
+        transform: scale(1) translateY(5px);
+    }
+}
+
+.share{
+    width: 25%;
+    text-align: end;
+    background: linear-gradient(to right, #ff0000 50%, #ffff00 50%) left;
+    background-size: 200% 100%;
+    transition: .5s ease-out;  
+}
+/* share icon hover */
+.share i:hover{
+    cursor: pointer;
+    animation: share_animation 1s forwards linear;
+}
+.share:hover{
+    background-position: right;
+}
+.share span{
+    color: #ff0000;
+}
+/* share animation */
+@keyframes share_animation {
+    0%   {
+        transform: scale(1) rotate(15deg);
+    }
+    25%  {
+        transform: scale(2) rotate(30deg);
+    }
+    50%  {
+        transform: scale(3) rotate(45deg);
+    }
+    75% {
+        transform: scale(2) rotate(30deg);
+    }
+    90% {
+        transform: scale(1.5) rotate(15deg); 
+    }
+    100% {
+        transform: scale(1) rotate(0deg) ;
+    }
+}
+/* comment box styles */
+.comment_box{
+    display: flex;
+    justify-content: space-around ;
+    padding: 25px;
+    width: 55%;
+    margin: auto;
+    visibility: hidden;
+    background-color: #ffffff;
+}
