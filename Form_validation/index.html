@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel = "stylesheet">
+    <title>Form Validation</title>
+</head>
+<body>
+    <header>
+        <div class="image_container">
+            <img src="assets/images/Sirius_CDW_Cobranded_PMS2747.svg" alt = "Sirius logo image">
+        </div>
+    </header>
+    <div class="form_container">
+        <h3 class="billing_title">BILLING DETAILS</h3>
+        <form>
+            <div class="name_container">
+                <div class="first_name_container">
+                    <label for="First name">First Name</label><input type="text" name="First Name" id="fname"><div id="fname_errorbox"></div>
+                </div>
+                <div class="last_name_container">
+                    <label for="Last name">Last Name</label><input type="text" name="Last Name" id="lname"><div id="lname_errorbox"></div>
+                </div>
+            </div>
+            <div class="email_container">
+                <label for="Email">Email Address</label>
+                <input type="text" name="Email" id="mail">
+                <div id="mailid_errorbox"></div>
+            </div>
+            <div class="number_container">
+                <label for="Contact Number">Contact Number</label>
+                <input type="text" name="Contact Number" id="numb">
+                <div id="phone_errorbox"></div>
+            </div>
+            <div class="pincode_container">
+                <label for="Pin Code">Pin Code</label>
+                <input type="text" name="Pin Code" id="code">
+                <div id="pincode_errorbox"></div>
+            </div>
+            <h3 class="payment_title">PAYMENT DETAILS</h3>
+            <div class="card_container">
+                <label for="Card Number">Card Number</label>
+                <input type="text" name="card number" id="cardnum">
+                <div id="cardnumber_errorbox"></div>
+            </div>
+            <div class = "card">
+                <div class="expiry_container">
+                    <label for="Card Year">Card Expiry</label>
+                    <input type="text" name="card year" id="cardyear">
+                    <div id="cardyear_errorbox"></div>
+                </div>
+                <div class="cvv_container">
+                    <label for="CVV">CVV</label>
+                    <input type="text" name="cvv" id="cvv1">
+                    <div id="cvv_errorbox"></div><br>
+
+                </div>
+            </div>
+            <button id="btn" onclick="return validate()">COMPLETE PAYMENT</button>
+        </form>
+    </div>
+    <!-- <script>
+        
+    </script> -->
+</body>
+
+</html>
+

@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    /* background-color: #f5f5f5; */
+}
+img{
+    width: 100%;
+}
+.image_container{
+    width: 20%;
+    margin: -65px auto;
+    /* overflow: hidden; */
+}
+.form_container{
+    padding: 32px;
+    width: 35%;
+    margin: auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.billing_title{
+    margin: 10px 0;
+    color: #001c72;
+}
+.name_container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 30px 0 7px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.name_container input{
+    width: 250px;
+    margin: 4px 0;
+    height: 35px;
+}
+.name_container label , .email_container label, .number_container label, .pincode_container label, .card_container label , .expiry_container label , .cvv_container label{
+    display: block;
+    font-size: 12px;
+}
+.name_container div{
+    width: 50%;
+    height: 35px;
+    border-radius: 10%;
+    display: block;
+    margin: 0 0 30px 0;
+}
+.number_container div{
+    width: 250px;
+    /* height: 35px; */
+    border-radius: 10%;
+    display: block;
+}
+.last_name_container input{
+    width: 270px;
+}
+.card div{
+    width: 265px;
+    /* height: 35px; */
+    border-radius: 10%;
+    /* display: block; */
+}
+.payment_title{
+    margin: 45px 0 0;
+}
+.expiry_container input{
+    width: 255px;
+}
+.cvv_container input{
+    width: 255px;
+}
+.name_container #fname_errorbox, .name_container #lname_errorbox, .email_container #mailid_errorbox, .number_container #phone_errorbox, .pincode_container #pincode_errorbox, .card_container #cardnumber_errorbox, .expiry_container #cardyear_errorbox , .cvv_container #cvv_errorbox{ 
+    font-size: 12px;
+    color: #ff0000;
+}
+.email_container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+.name_container input, .email_container input, .number_container input , .pincode_container input, .card_container input , .expiry_container input , .cvv_container input{
+    height: 40px;
+    margin: 4px 0;
+}
+.number_container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+.pincode_container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+.card_container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+.expiry_container{
+    display: flex;
+    flex-direction: column;
+}
+.cvv_container{
+    display: flex;
+    flex-direction: column;
+}
+#btn{
+    border-radius: 3%;
+    margin: 5px 0;
+    background-color: #001b71;
+    padding: 15px 25px;
+    color: #ffffff;
+    width: 100%;
+}
