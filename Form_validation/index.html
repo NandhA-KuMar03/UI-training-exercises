@@ -8,32 +8,44 @@
     <title>Form Validation</title>
 </head>
 <body>
+
+    <!-- header part -->
     <header>
         <div class="image_container">
             <img src="assets/images/Sirius_CDW_Cobranded_PMS2747.svg" alt = "Sirius logo image">
         </div>
     </header>
+
+    <!-- forms part -->
     <div class="form_container">
         <h3 class="billing_title">BILLING DETAILS</h3>
         <form>
+            <!-- first name and last name container -->
             <div class="name_container">
                 <div class="first_name_container">
-                    <label for="First name">First Name</label><input type="text" name="First Name" id="fname"><div id="fname_errorbox"></div>
+                    <label for="First name">First Name</label>
+                    <input type="text" name="First Name" id="fname">
+                    <div id="fname_errorbox"></div>
                 </div>
                 <div class="last_name_container">
-                    <label for="Last name">Last Name</label><input type="text" name="Last Name" id="lname"><div id="lname_errorbox"></div>
+                    <label for="Last name">Last Name</label>
+                    <input type="text" name="Last Name" id="lname">
+                    <div id="lname_errorbox"></div>
                 </div>
             </div>
+            <!-- email container -->
             <div class="email_container">
                 <label for="Email">Email Address</label>
                 <input type="text" name="Email" id="mail">
                 <div id="mailid_errorbox"></div>
             </div>
+            <!-- number container -->
             <div class="number_container">
                 <label for="Contact Number">Contact Number</label>
                 <input type="text" name="Contact Number" id="numb">
                 <div id="phone_errorbox"></div>
             </div>
+            <!-- pincode container -->
             <div class="pincode_container">
                 <label for="Pin Code">Pin Code</label>
                 <input type="text" name="Pin Code" id="code">
@@ -45,12 +57,14 @@
                 <input type="text" name="card number" id="cardnum">
                 <div id="cardnumber_errorbox"></div>
             </div>
-            <div class = "card">
+            <!-- card details container -->
+            <div class = "cardexpiry_cvv_container">
                 <div class="expiry_container">
                     <label for="Card Year">Card Expiry</label>
                     <input type="text" name="card year" id="cardyear">
                     <div id="cardyear_errorbox"></div>
                 </div>
+                <!-- cvv container -->
                 <div class="cvv_container">
                     <label for="CVV">CVV</label>
                     <input type="text" name="cvv" id="cvv1">
@@ -61,9 +75,9 @@
             <button id="btn" onclick="return validate()">COMPLETE PAYMENT</button>
         </form>
     </div>
-    <!-- <script>
+    <script src="js/scripts.js">
         
-    </script> -->
+    </script>
 </body>
 
 </html>

@@ -36,7 +36,7 @@ function validate(){
     }
 
     // Email
-    const regex_mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regex_mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*[a-z](\.[a-z]{2,3})+$/;
     var email = document.querySelector("#mail").value;
     flag_mailid = true;
     let mailid_errorbox = document.querySelector("#mailid_errorbox");
@@ -144,6 +144,10 @@ function validate(){
         cvv_errorbox.innerHTML = "";
     }
     
-    return false;
-    // return true
+    if(flag_fname && flag_lname && flag_mailid && flag_number && flag__code && flag__card && flag_cardexpiry && flag_cvv){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
