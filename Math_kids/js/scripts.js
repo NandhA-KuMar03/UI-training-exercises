@@ -1,167 +1,152 @@
+
+// Functions , text and prompt stored in object
 shape={
-    Circle: ["Enter Radius" ,function areacir(radius){
+    circle: ["Enter Radius" ,function areacir(radius){
         return 3.14 * radius * radius;
     }  , function per_circle(radius){
         return 2*3.14*radius;
-    } , "r" , "πr" , "2πr^2" ,"RADIUS" , "AREA" , "PERIMETER"],
-    Triangle: ["Enter Side (Base & Height)" , function area_triangle(side){
+    } , "r" , "πr^2" , "2πr" ,"RADIUS" , "AREA" , "PERIMETER"],
+    triangle: ["Enter Side (Base & Height)" , function area_triangle(side){
         return 0.433*side*side;
     } , function peri_trianlge(side){
         return 3 * side;
-    } , "s" , "0.4333 *s *s" , "3 * s" ,"SIDE" , "AREA" , "PERIMETER"],
-    Square: ["Enter Side" , function area_square(side){
+    } , "s" , "0.4333 * s * s" , "3 * s" ,"SIDE" , "AREA" , "PERIMETER"],
+    square: ["Enter Side" , function area_square(side){
         return side*side;
     } , function peri_square(side){
         return 4*side;
-    } , "s" , "s *s " , "4 *s " , "SIDE" , "AREA" , "PERIMETER"]
+    } , "s" , "s * s " , "4 * s " , "SIDE" , "AREA" , "PERIMETER"],
 };
 
-
-function function_select_shape(){
-    console.log(event.target.id);
-    e = event.target.id;
-    let btn = document.createElement("button");
-    btn.innerHTML = "NEXT";
-    btn.className = "next_button";
-    var cs= document.querySelector(".firstpage");
-    var tick1= document.querySelector(".tick_icon_circle");
-    var tick2= document.querySelector(".tick_icon_triangle");
-    var tick3= document.querySelector(".tick_icon_square");
-    if(e=="Circle"){
-        tick1.style.zIndex = "2";
-        tick2.style.zIndex = "-1";
-        tick3.style.zIndex = "-1";
+// Function which executes when user clicks any shape
+function SelectShape(){
+    ShapeSelected = event.target.className;
+    // console.log(ShapeSelected);
+    let NextButton = document.createElement("button");
+    NextButton.innerHTML = "NEXT";
+    NextButton.classList.add('next-button' , 'buttons');
+    var InitialPage = document.querySelector(".first-page");
+    var Tick1 = document.querySelector(".tick-icon-circle");
+    var Tick2= document.querySelector(".tick-icon-triangle");
+    var Tick3= document.querySelector(".tick-icon-square");
+    shape.selected = ShapeSelected;
+    console.log(shape.selected);
+    // Displaying and Hiding the tick part
+    if(ShapeSelected=="circle"){
+        Tick1.style.zIndex = "2";
+        Tick2.style.zIndex = "-1";
+        Tick3.style.zIndex = "-1";
     }
-    if(e=="Triangle"){
-        tick1.style.zIndex = "-1";
-        tick2.style.zIndex = "2";
-        tick3.style.zIndex = "-1";
+    if(ShapeSelected=="triangle"){
+        Tick1.style.zIndex = "-1";
+        Tick2.style.zIndex = "2";
+        Tick3.style.zIndex = "-1";
     }
-    if(e=="Square"){
-        tick1.style.zIndex = "-1";
-        tick2.style.zIndex = "-1";
-        tick3.style.zIndex = "2";
+    if(ShapeSelected=="square"){
+        Tick1.style.zIndex = "-1";
+        Tick2.style.zIndex = "-1";
+        Tick3.style.zIndex = "2";
     }
-    cs.appendChild(btn);
-    btn.addEventListener("click" , func1);
+    InitialPage.appendChild(NextButton);
+    NextButton.addEventListener("click" , GetInput);
 }
 
-
-function func1(){
-    let rem = document.querySelector(".firstpage");
-    rem.remove();
-    console.log(e);
-    let create_page2 = document.createElement("section");
-    let p = document.createElement("p");
-    let inp = document.createElement("input");
-    inp.className = "input_text";
-    let btn2 = document.createElement("Button");
-    btn2.className = "calc_button";
-    btn2.innerHTML = "CALCULATE";
-    if(e == "Circle")
-        var txt = shape[e][0];
-    else if(e == "Triangle")
-        var txt = shape[e][0];
-    else
-        var txt = shape[e][0];
-    p.innerHTML = "2. " + txt;
-    document.body.appendChild(create_page2);
-    create_page2.appendChild(p);
-    create_page2.appendChild(inp);
-    create_page2.appendChild(btn2);
-    btn2.addEventListener("click" , fun3);
+// Function which executes when user clicks next button on first page
+function GetInput(){
+    let RemovePageOne = document.querySelector(".first-page");
+    RemovePageOne.remove();
+    let CreatePage2 = document.createElement("section");
+    let Label = document.createElement("p");
+    let InputText = document.createElement("input");
+    InputText.type = "number";
+    InputText.className = "input-text";
+    let CalculateButton = document.createElement("Button");
+    CalculateButton.classList.add('calc-button' , 'buttons');
+    CalculateButton.innerHTML = "CALCULATE";
+    var UserPrompt = shape[ShapeSelected][0];
+    Label.innerHTML = "2. " + UserPrompt;
+    document.body.appendChild(CreatePage2);
+    CreatePage2.appendChild(Label);
+    CreatePage2.appendChild(InputText);
+    CreatePage2.appendChild(CalculateButton);
+    CalculateButton.addEventListener("click" , ProcessValues);
 }
 
-
-function fun3(){
-    let val = document.querySelector(".input_text").value;
-    console.log(val);
-    let rem1 = document.querySelector("section")
-    rem1.remove();
-    if(e == "Circle"){
-        var area = shape[e][1](val);
-        var perimeter = shape[e][2](val);
-        console.log(area);
-        console.log(perimeter);
-        fun4(val,area,perimeter);
-    }
-    if(e == "Triangle"){
-        var area = shape[e][1](val);
-        var perimeter = shape[e][2](val);
-        console.log(area);
-        console.log(perimeter);
-        fun4(val,area,perimeter);
-    }
-    if(e == "Square"){
-        var area = shape[e][1](val);
-        var perimeter = shape[e][2](val);
-        console.log(area);
-        console.log(perimeter);
-        fun4(val,area,perimeter);
-    }
+// Calling functions and processing it when values are passed
+function ProcessValues(){
+    let UserValue = document.querySelector(".input-text").value;
+    let RemovePageTwo = document.querySelector("section")
+    RemovePageTwo.remove();
+    var Area = shape[ShapeSelected][1](UserValue);
+    var Perimeter = shape[ShapeSelected][2](UserValue);
+    DisplayResult(UserValue,Area,Perimeter);
 }
 
-function fun4(val,area , perimeter){
-    let create_page3 = document.createElement("section");
-    let shape_div = document.createElement("div");
-    shape_div.className = e;
-    create_page3.className = "page3";
-    let table_data = document.createElement("table");
-    table_data.className = "page3_table"
-    let start_again_btn = document.createElement("button");
-    start_again_btn.className = "start_agian"
-    start_again_btn.innerHTML = "START AGAIN";
-    create_page3.appendChild(shape_div);  
-    create_page3.appendChild(table_data); 
-    create_page3.appendChild(start_again_btn);        
-    var row = table_data.insertRow(0);
-    row.className = "row1";
-    var row1 = table_data.insertRow(1);
-    var row2 = table_data.insertRow(2);
-    var row3 = table_data.insertRow(3);
+// Displaying result in the table in the final page
+function DisplayResult(UserValue,Area , Perimeter){
+    let CreatePage3 = document.createElement("section");
+    let ShapeDisplay = document.createElement("div");
+    ShapeDisplay.className = ShapeSelected;
+    CreatePage3.className = "page3";
+    let TableData = document.createElement("table");
+    TableData.className = "page3-table"
+    let StartAgainButton = document.createElement("button");
+    StartAgainButton.innerHTML = "START AGAIN";
+    StartAgainButton.classList.add('start-again' , 'buttons');
+    CreatePage3.appendChild(ShapeDisplay);  
+    CreatePage3.appendChild(TableData); 
+    CreatePage3.appendChild(StartAgainButton);   
+    
 
-    var cell0 = row.insertCell();
-    cell0.colSpan = 3;
-    cell0.className = "row11";
-    var cell1 = row1.insertCell(0);
-    var cell2 = row1.insertCell(1);
-    cell2.className = "col2";
-    var cell3 = row1.insertCell(2);
-    cell3.className = "col3";
+    var ShapeName = TableData.insertRow(0);
+    ShapeName.className = "row1";
+    var SideRowOne = TableData.insertRow(1);
+    var AreaRow = TableData.insertRow(2);
+    var PerimeterRow = TableData.insertRow(3);
 
-    var cell4 = row2.insertCell(0);
-    var cell5 = row2.insertCell(1);
-    cell5.className = "col2";
-    var cell6 = row2.insertCell(2);
-    cell6.className = "col3";
+    var DisplayShapeName = ShapeName.insertCell();
 
-    var cell7 = row3.insertCell(0);
-    var cell8 = row3.insertCell(1);
-    cell8.className = "col2";
-    var cell9 = row3.insertCell(2);
-    cell9.className = "col3";
+    DisplayShapeName.colSpan = 3;
+    DisplayShapeName.className = "shape-name";
+    var LabelSide = SideRowOne.insertCell(0);
+    var FormulaForSide = SideRowOne.insertCell(1);
+    FormulaForSide.className = "col2";
+    var UserInputtedValue = SideRowOne.insertCell(2);
+    UserInputtedValue.className = "col3";
 
-    if(e=="Triangle"){
-        cell0.innerHTML = "Equilateral " + e;
+    var AreaLabel = AreaRow.insertCell(0);
+    var FormulaForArea = AreaRow.insertCell(1);
+    FormulaForArea.className = "col2";
+    var AreaResult = AreaRow.insertCell(2);
+    AreaResult.className = "col3";
+
+    var PerimeterLabel = PerimeterRow.insertCell(0);
+    var FormulaForPerimeter = PerimeterRow.insertCell(1);
+    FormulaForPerimeter.className = "col2";
+    var PerimeterResult = PerimeterRow.insertCell(2);
+    PerimeterResult.className = "col3";
+    if(ShapeSelected=="triangle"){
+        DisplayShapeName.innerHTML = "Equilateral " + ShapeSelected;
     }   
     else{
-        cell0.innerHTML = e;
+        DisplayShapeName.innerHTML = ShapeSelected;
     }
-    cell1.innerHTML = shape[e][6];
-    cell2.innerHTML = shape[e][3];
-    cell3.innerHTML = val + " cm";
+    LabelSide.innerHTML = shape[ShapeSelected][6];
+    FormulaForSide.innerHTML = shape[ShapeSelected][3];
+    UserInputtedValue.innerHTML = UserValue + " cm";
 
-    cell4.innerHTML = shape[e][7];
-    cell5.innerHTML = shape[e][4];
-    cell6.innerHTML = area + " sq cm";
+    AreaLabel.innerHTML = shape[ShapeSelected][7];
+    FormulaForArea.innerHTML = shape[ShapeSelected][4];
+    AreaResult.innerHTML = Area + " sq cm";
 
-    cell7.innerHTML = shape[e][8];
-    cell8.innerHTML = shape[e][5];
-    cell9.innerHTML = perimeter.toFixed(2) + " cm";
-    document.body.appendChild(create_page3);
-    start_again_btn.addEventListener("click" , fun5 );
+    PerimeterLabel.innerHTML = shape[ShapeSelected][8];
+    FormulaForPerimeter.innerHTML = shape[ShapeSelected][5];
+    PerimeterResult.innerHTML = Perimeter.toFixed(2) + " cm";
+    document.body.appendChild(CreatePage3);
+    StartAgainButton.addEventListener("click" , ReloadPage );
 }
 
-function fun5(){
+// Reload function when try again button is clicked
+function ReloadPage(){
     location.reload();
 }
