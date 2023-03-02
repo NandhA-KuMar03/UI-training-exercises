@@ -7,18 +7,16 @@ friends.forEach(element => {
     img_container.className = "img_contain";
     let details_container = document.createElement("div");
     details_container.className = "details_container";
-    let name = document.createElement("p");
+    let name = document.createElement("h3");
     name.className = "name";
-    let mail = document.createElement("p");
+    let mail = document.createElement("h6");
     mail.className = "mailid";
     name.innerHTML = element.first_name + " " +element.last_name;
     mail.innerHTML = element.email;
-
 
     card_container.appendChild(img_container);
     card_container.appendChild(details_container);
     details_container.appendChild(name);
     details_container.appendChild(mail);
     page_container.appendChild(card_container);
-
 });

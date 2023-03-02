@@ -1,10 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Roboto', sans-serif;
-    /* font-family: 'Roboto Condensed', sans-serif; */
 }
+
+/* Styles for title */
 .title_container{
     padding: 30px;
     margin: 0 auto 55px;
@@ -15,6 +15,7 @@
     font-size: x-large;
     font-weight: 100;
 }
+/* Styles for  overall container*/
 .page_container{
     display: flex;
     flex-direction: row;
@@ -31,6 +32,7 @@
     width: 30.8%;
     background-color: #5167af;
 }
+/* Styles for image container */
 .img_contain{
     display: inline-block;
     width: 75px;
@@ -49,5 +51,6 @@
     font-weight: 400;
 }
 .mailid{
+    font-size: 16px;
     font-weight: 100;
 }
