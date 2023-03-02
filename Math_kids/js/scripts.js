@@ -1,53 +1,75 @@
-
+localStorage.clear();
 // Functions , text and prompt stored in object
 shape={
-    circle: ["Enter Radius" ,function areacir(radius){
-        return 3.14 * radius * radius;
-    }  , function per_circle(radius){
-        return 2*3.14*radius;
-    } , "r" , "πr^2" , "2πr" ,"RADIUS" , "AREA" , "PERIMETER"],
-    triangle: ["Enter Side (Base & Height)" , function area_triangle(side){
-        return 0.433*side*side;
-    } , function peri_trianlge(side){
-        return 3 * side;
-    } , "s" , "0.4333 * s * s" , "3 * s" ,"SIDE" , "AREA" , "PERIMETER"],
-    square: ["Enter Side" , function area_square(side){
-        return side*side;
-    } , function peri_square(side){
-        return 4*side;
-    } , "s" , "s * s " , "4 * s " , "SIDE" , "AREA" , "PERIMETER"],
+        Text : {
+            TextArea : "AREA",
+            TextPerimeter : "PERIMETER",
+            UnitValue : " cm",
+            UnitArea : " sq cm",
+            UnitPerimeter : " cm"
+        },
+        circle : {
+            prompt: "Enter Radius",
+            FormulaForArea : "πr^2",
+            FormulaForPerimeter : "2πr",
+            Variable : "r",
+            Text : "Radius",
+            Area(radius){
+                return 3.14 * radius * radius;
+            },
+            Perimeter(radius){
+                return 2*3.14*radius;
+            }
+        },
+        triangle : {
+            prompt : "Enter Side (Base & Height)",
+            FormulaForArea : "0.4333 * s * s",
+            FormulaForPerimeter : "3 * s",
+            Variable : "s",
+            Text : "Side",
+            Area(side){
+                return 0.433*side*side;
+            },
+            Perimeter(side){
+                return 3 * side;
+            }
+        },
+        square : {
+            prompt : "Enter Side",
+            FormulaForArea : "s * s",
+            FormulaForPerimeter : "4 * s",
+            Variable : "s",
+            Text : "Side",
+            Area(side){
+                return side*side;
+            },
+            Perimeter(side){
+                return 4*side;
+            }
+        },
+        selected : ""
 };
 
 // Function which executes when user clicks any shape
 function SelectShape(){
     ShapeSelected = event.target.className;
-    // console.log(ShapeSelected);
+    localStorage.setItem("Shape" , ShapeSelected);
     let NextButton = document.createElement("button");
     NextButton.innerHTML = "NEXT";
     NextButton.classList.add('next-button' , 'buttons');
     var InitialPage = document.querySelector(".first-page");
-    var Tick1 = document.querySelector(".tick-icon-circle");
-    var Tick2= document.querySelector(".tick-icon-triangle");
-    var Tick3= document.querySelector(".tick-icon-square");
-    shape.selected = ShapeSelected;
-    console.log(shape.selected);
-    // Displaying and Hiding the tick part
-    if(ShapeSelected=="circle"){
-        Tick1.style.zIndex = "2";
-        Tick2.style.zIndex = "-1";
-        Tick3.style.zIndex = "-1";
+    var PreviousSelected = shape.selected;
+    if(PreviousSelected == ""){
+        document.querySelector("." + ShapeSelected + " .tick").style.zIndex = "2";
+        shape.selected = ShapeSelected;
     }
-    if(ShapeSelected=="triangle"){
-        Tick1.style.zIndex = "-1";
-        Tick2.style.zIndex = "2";
-        Tick3.style.zIndex = "-1";
-    }
-    if(ShapeSelected=="square"){
-        Tick1.style.zIndex = "-1";
-        Tick2.style.zIndex = "-1";
-        Tick3.style.zIndex = "2";
+    if(PreviousSelected != ""){
+        document.querySelector("." + PreviousSelected + " .tick").style.zIndex = "-1";
+        document.querySelector("." + ShapeSelected + " .tick").style.zIndex = "2";
+        shape.selected = ShapeSelected;
     }
     InitialPage.appendChild(NextButton);
+    localStorage.clear();
     NextButton.addEventListener("click" , GetInput);
 }
 
@@ -63,7 +85,7 @@ function GetInput(){
     let CalculateButton = document.createElement("Button");
     CalculateButton.classList.add('calc-button' , 'buttons');
     CalculateButton.innerHTML = "CALCULATE";
-    var UserPrompt = shape[ShapeSelected][0];
+    var UserPrompt = shape[ShapeSelected].prompt;
     Label.innerHTML = "2. " + UserPrompt;
     document.body.appendChild(CreatePage2);
     CreatePage2.appendChild(Label);
@@ -77,8 +99,8 @@ function ProcessValues(){
     let UserValue = document.querySelector(".input-text").value;
     let RemovePageTwo = document.querySelector("section")
     RemovePageTwo.remove();
-    var Area = shape[ShapeSelected][1](UserValue);
-    var Perimeter = shape[ShapeSelected][2](UserValue);
+    var Area = shape[ShapeSelected].Area(UserValue);
+    var Perimeter = shape[ShapeSelected].Perimeter(UserValue);
     DisplayResult(UserValue,Area,Perimeter);
 }
 
@@ -96,7 +118,6 @@ function DisplayResult(UserValue,Area , Perimeter){
     CreatePage3.appendChild(ShapeDisplay);  
     CreatePage3.appendChild(TableData); 
     CreatePage3.appendChild(StartAgainButton);   
-    
 
     var ShapeName = TableData.insertRow(0);
     ShapeName.className = "row1";
@@ -131,17 +152,17 @@ function DisplayResult(UserValue,Area , Perimeter){
     else{
         DisplayShapeName.innerHTML = ShapeSelected;
     }
-    LabelSide.innerHTML = shape[ShapeSelected][6];
-    FormulaForSide.innerHTML = shape[ShapeSelected][3];
-    UserInputtedValue.innerHTML = UserValue + " cm";
+    LabelSide.innerHTML = shape[ShapeSelected].Text;
+    FormulaForSide.innerHTML = shape[ShapeSelected].Variable;
+    UserInputtedValue.innerHTML = UserValue + shape.Text.UnitValue;
 
-    AreaLabel.innerHTML = shape[ShapeSelected][7];
-    FormulaForArea.innerHTML = shape[ShapeSelected][4];
-    AreaResult.innerHTML = Area + " sq cm";
+    AreaLabel.innerHTML = shape.Text.TextArea;
+    FormulaForArea.innerHTML = shape[ShapeSelected].FormulaForArea;
+    AreaResult.innerHTML = Area + shape.Text.UnitArea;
 
-    PerimeterLabel.innerHTML = shape[ShapeSelected][8];
-    FormulaForPerimeter.innerHTML = shape[ShapeSelected][5];
-    PerimeterResult.innerHTML = Perimeter.toFixed(2) + " cm";
+    PerimeterLabel.innerHTML = shape.Text.TextPerimeter;
+    FormulaForPerimeter.innerHTML = shape[ShapeSelected].FormulaForPerimeter;
+    PerimeterResult.innerHTML = Perimeter.toFixed(2) + shape.Text.UnitPerimeter;
     document.body.appendChild(CreatePage3);
     StartAgainButton.addEventListener("click" , ReloadPage );
 }
@@ -149,4 +170,5 @@ function DisplayResult(UserValue,Area , Perimeter){
 // Reload function when try again button is clicked
 function ReloadPage(){
     location.reload();
+    localStorage.clear();
 }
