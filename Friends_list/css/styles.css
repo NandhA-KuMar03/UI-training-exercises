@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for title */
+header{
+    padding: 30px;
+    margin: 0 auto 55px;
+    background-color: #372063;
+    color: #ffffff;
+}
+.title{
+    font-size: 24px;
+    font-weight: 100;
+}
+/* Styles for  overall container*/
+.page-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0.9em;
+    justify-content: space-between;
+    width: 90%;
+    margin:auto;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    width: 30.8%;
+    background-color: #5167af;
+}
+/* Styles for image container */
+.img-contain{
+    display: inline-block;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50%;
+}
+.details-container{
+    display: flex;
+    row-gap: 0.2em;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 17px;
+    color: #ffffff;
+}
+.name{
+    font-size: 20px;
+    font-weight: 400;
+}
+.mail-id{
+    font-size: 16px;
+    font-weight: 100;
+}
