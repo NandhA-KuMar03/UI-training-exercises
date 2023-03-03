@@ -1,153 +1,96 @@
+
+
+// Function check for validating each field 
+// Params in the function are 1)User value 2)Input box id for changing border color 3) Error Box id for displaying error message 4) Error message when field is empty 5) Error message when field is invalid 6) Regex pattern
+function check(UserValue , inputBox , errorBox , errorBoxEmptyField , errorBoxInvalidField , regexPattern){
+    if(UserValue == ""){
+        console.log("here");
+        errorBox.innerHTML = errorBoxEmptyField;
+        inputBox.classList.add("error");
+        return false;
+    }
+    else if(regexPattern.test(UserValue) == false){
+        inputBox.classList.add("error");
+        errorBox.innerHTML = errorBoxInvalidField;
+        return false;
+    }
+    else{
+        inputBox.classList.remove("error");
+        errorBox.innerHTML="";
+        return true;
+    }
+}
+
 function validate(){
+    // First Name Validation
+    // Storing input box , error box for changing styles
+    // Sending values , input box and error box and error messages too
+    const regexName = /^[A-Za-z]{1,30}$/;
+    let firstName = document.querySelector("#idFirstName").value;
+    let firstNameInputBox = document.querySelector("#idFirstName");
+    let errorBoxId = document.querySelector("#firstNameErrorBox");
+    flagFirstName = check(firstName , firstNameInputBox , errorBoxId , "First name is required" , "First Name is not valid" , regexName );
 
-    // First Name
-    const regex_name = /^[A-Za-z]{1,30}$/;
-    var fname = document.querySelector("#fname").value;
-    flag_fname = true;
-    let first_name_errorbox = document.querySelector("#fname_errorbox");
-    if(fname == ""){
-        first_name_errorbox.innerHTML = "First name is required";
-        flag_fname = false;
-    }  
-    else if(regex_name.test(fname)==false){
-        flag_fname = false;
-        first_name_errorbox.innerHTML = "First Name is not valid";
-    }   
-    else{
-        flag_fname = true;
-        first_name_errorbox.innerHTML = "";
-    }
+    // Last Name validation
+    let lastName = document.querySelector("#idLastNname").value;
+    let lastNameInputBox = document.querySelector("#idLastNname");
+    let lastNameErrorBox = document.querySelector("#lastNameErrorBox");
+    flagLastName = check(lastName , lastNameInputBox , lastNameErrorBox , "Last name is required" , "Last Name is not valid", regexName);
+    // Passing user inputted value , input box id , error box id , error messages , regex pattern
 
-    // Last Name
-    var lname = document.querySelector("#lname").value;
-    flag_lname = true;
-    let last_name_errorbox = document.querySelector("#lname_errorbox");
-    if(lname == ""){
-        last_name_errorbox.innerHTML = "Last name is required";
-        flag_lname = false;
-    }  
-    else if(regex_name.test(lname)==false){
-        flag_lname = false;
-        last_name_errorbox.innerHTML = "Last Name is not valid";
-    }   
-    else{
-        flag_lname = true;
-        last_name_errorbox.innerHTML = "";
-    }
-
-    // Email
-    const regex_mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*[a-z](\.[a-z]{2,3})+$/;
-    var email = document.querySelector("#mail").value;
-    flag_mailid = true;
-    let mailid_errorbox = document.querySelector("#mailid_errorbox");
-    if(email == ""){
-        mailid_errorbox.innerHTML = "Email address is required";
-        flag_mailid = false;
-    }  
-    else if(regex_mail.test(email)==false){
-        mailid_errorbox.innerHTML = "Email address is not valid";
-        flag_mailid = false;
-    }   
-    else{
-        flag_mailid = true;
-        mailid_errorbox.innerHTML = "";
-    }
+    // Email validation
+    // Storing input box , error box for changing styles
+    // Sending values , input box and error box and error messages too
+    const regexMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*[a-z](\.[a-z]{2,3})+$/;
+    let email = document.querySelector("#idMail").value;
+    let emailInputBox = document.querySelector("#idMail");
+    let emailIdErrorBox = document.querySelector("#mailIdErrorBox");
+    flagMailId = check(email , emailInputBox , emailIdErrorBox , "Email address is required" , "Email address is not valid" , regexMail);
 
     //Contact Number
-    const regex_phone_num = /^\d{10}$/;
-    var contact_number = document.querySelector("#numb").value;
-    flag_number = true;
-    let phone_errorbox = document.querySelector("#phone_errorbox");
-    if(contact_number == ""){
-        phone_errorbox.innerHTML = "Contact Number is required";
-        flag_number=false;
-    }
-    else if(regex_phone_num.test(contact_number)==false){
-        phone_errorbox.innerHTML = "Contact Number is not valid";
-        flag_number = false;
-    }
-    else{
-        flag_number = true;
-        phone_errorbox.innerHTML = "";
-    }
+    const regexPhoneNumber = /^\d{10}$/;
+    let contactNumber = document.querySelector("#idNumber").value;
+    let contactNumberInputBox = document.querySelector("#idNumber");
+    let contactNumberErrorBox = document.querySelector("#phoneNumberErrorBox");
+    flagPhoneNumber = check(contactNumber , contactNumberInputBox , contactNumberErrorBox , "Contact Number is required" , "Contact Number is not valid" , regexPhoneNumber);
+    // Passing user inputted value , input box id , error box id , error messages , regex pattern
 
     //Pin code Number
-    const regex_pincode = /^\d{6}$/;
-    var code = document.querySelector("#code").value;
-    flag__code = true;
-    let pincode_errorbox = document.querySelector("#pincode_errorbox");
-    if(code == ""){
-        pincode_errorbox.innerHTML = "PIN CODE is required";
-        flag__code = false;
-    }
-    else if(regex_pincode.test(code)==false){
-        pincode_errorbox.innerHTML = "PIN Code is not valid";
-        flag__code = false;
-    }   
-    else{
-        flag__code = true;
-        pincode_errorbox.innerHTML = "";
-    }
+    const regexPinCode = /^\d{6}$/;
+    let pinCode = document.querySelector("#idPinCode").value;
+    let pinCodeInputBox = document.querySelector("#idPinCode");
+    let pinCodeErrorBox = document.querySelector("#pinCodeErrorBox");
+    flagPinCode = check(pinCode , pinCodeInputBox , pinCodeErrorBox , "Pin Code is required" , "Pin Code is not valid" , regexPinCode);
 
     //Card Number 
-    const regex_card = /^\d{16}$/;
-    var card = document.querySelector("#cardnum").value;
-    flag_card = true;
-    let cardnumber_errorbox = document.querySelector("#cardnumber_errorbox");
-    if(card == ""){
-        cardnumber_errorbox.innerHTML = "Card Number is required";
-        flag__card = false;
-    }
-    else if(regex_card.test(card)==false){
-        cardnumber_errorbox.innerHTML = "Card Number is not valid";
-        flag__card = false;
-    }   
-    else{
-        flag__card = true;
-        cardnumber_errorbox.innerHTML = "";
-    }
+    const regexCard = /^\d{16}$/;
+    let card = document.querySelector("#idCardNumber").value;
+    let cardInputBox = document.querySelector("#idCardNumber");
+    let CardNumberErrorBox = document.querySelector("#cardNumberErrorbox");
+    flagCard = check(card , cardInputBox , CardNumberErrorBox , "Card Number is required" , "Card Number is not valid" , regexCard);
 
     //Card Year
-    let date = new Date();
-    let year = date.getFullYear()
-    var card_exp = document.querySelector("#cardyear").value;
-    flag_cardexpiry = true;
-    let cardyear_errorbox = document.querySelector("#cardyear_errorbox");
-    if(card_exp == ""){
-        cardyear_errorbox.innerHTML = "Card Expiry is required";
-        flag_cardexpiry = false;
-    }
-    else if(year > card_exp){
-        cardyear_errorbox.innerHTML = "Card Expiry is not valid";
-        flag_cardexpiry = false;
-    }
-    else{
-        flag_cardexpiry = true;
-        cardyear_errorbox.innerHTML = "";
-    }
+    const regexYear = /^202[3-9]$/;
+    let cardExpiry = document.querySelector("#idCardExpiryYear").value;
+    let cardExpiryInputBox = document.querySelector("#idCardExpiryYear");
+    let cardExpiryErrorBox = document.querySelector("#cardExpiryErrorBox");
+    flagCardExpiry = check(cardExpiry , cardExpiryInputBox , cardExpiryErrorBox , "Card Expiry is required" , "Card Expiry is not valid" , regexYear);
 
     //CVV
-    const regex_cvv= /^\d{3,4}$/;
-    var cvv = document.querySelector("#cvv1").value;
-    flag_cvv = true;
-    let cvv_errorbox = document.querySelector("#cvv_errorbox");
-    if(cvv == ""){
-        cvv_errorbox.innerHTML = "CVV is required";
-        flag_cvv = false;
-    }
-    else if(regex_cvv.test(cvv) == false){
-        cvv_errorbox.innerHTML = "CVV is not valid";
-        flag_cvv = false;
-    }
-    else{
-        flag_cvv = true;
-        cvv_errorbox.innerHTML = "";
-    }
+    const regexCvv= /^\d{3,4}$/;
+    let cvv = document.querySelector("#idCvv").value;
+    let cvvInputBox = document.querySelector("#idCvv");
+    let cvvErrorBox = document.querySelector("#cvvErrorBox");
+    flagCvv = check(cvv , cvvInputBox , cvvErrorBox , "CVV is required" , "CVV is not valid" , regexCvv);
     
-    if(flag_fname && flag_lname && flag_mailid && flag_number && flag__code && flag__card && flag_cardexpiry && flag_cvv){
+
+    // Storing each flag values and checking whether each field is valid or not 
+    // even if one field is not valid the form will not be submitted
+    if(flagFirstName && flagLastName && flagMailId && flagPhoneNumber && flagPinCode && flagCard && flagCardExpiry && flagCvv){
         return true;
     }
     else{
         return false;
     }
 }
+
