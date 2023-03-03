@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 100%;
+}
+.image-container{
+    width: 20%;
+    margin: -65px auto;
+}
+.form-container{
+    padding: 32px;
+    width: 35%;
+    margin: auto;
+    box-shadow: 0 3px 10px #00000033;
+}
+.billing-title{
+    margin: 10px 0;
+    color: #001c72;
+}
+.form-container label{
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Styles for first name and last name */
+.name-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 30px 0 7px;
+    background-color: #ffffff;
+}
+.name-container input, .email-container input, .number-container input , .pincode-container input, .card-container input , .expiry-container input , .cvv-container input{
+    margin: 4px 0;
+    height: 40px;
+}
+.name-container div{
+    display: block;
+    width: 50%;
+    margin: 0 0 30px 0;
+    height: 35px;
+    border-radius: 10%;
+}
+.name-container input{
+    width: 250px;
+    margin: 4px 0;
+    height: 35px;
+}
+.last-name-container input{
+    width: 270px;
+}
+
+/* Styles for email*/
+.email-container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+/* Styles for phone number*/
+.number-container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+.number-container div{
+    display: block;
+    width: 250px;
+    border-radius: 10%;
+}
+.error{
+    border: 1px red solid;
+}
+
+/* Styles for pincode*/
+.pincode-container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.payment-title{
+    margin: 45px 0 0;
+}
+
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+/* styles for cvv and expiry parent container */
+.cardexpiry-cvv-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.cardexpiry-cvv-container div{
+    width: 265px;
+    border-radius: 10%;
+}
+.expiry-container, .cvv-container{
+    display: flex;
+    flex-direction: column;
+}
+.expiry-container input, .cvv-container input{
+    width: 255px;
+}
+.name-container #firstNameErrorBox, .name-container #lastNameErrorBox, .email-container #mailIdErrorBox, .number-container #phoneNumberErrorBox, .pincode-container #pinCodeErrorBox, .card-container #cardNumberErrorbox, .expiry-container #cardExpiryErrorBox , .cvv-container #cvvErrorBox{ 
+    font-size: 12px;
+    color: #ff0000;
+}
+
+#btn{
+    border-radius: 3%;
+    margin: 5px 0;
+    background-color: #001b71;
+    padding: 15px 25px;
+    color: #ffffff;
+    width: 100%;
+}

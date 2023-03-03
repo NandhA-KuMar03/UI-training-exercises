@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel = "stylesheet">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <!-- header part -->
+    <header>
+        <div class="image-container">
+            <img src="assets/images/Sirius_CDW_Cobranded_PMS2747.svg" alt = "Sirius logo image">
+        </div>
+    </header>
+
+    <!-- forms part -->
+    <div class="form-container">
+        <h3 class="billing-title">BILLING DETAILS</h3>
+        <form>
+            <!-- first name and last name container -->
+            <div class="name-container">
+                <div class="first-name-container">
+                    <label for="First name">First Name</label>
+                    <input type="text" name="First Name" id="idFirstName">
+                    <div id="firstNameErrorBox"></div>
+                </div>
+                <div class="last-name-container">
+                    <label for="Last name">Last Name</label>
+                    <input type="text" name="Last Name" id="idLastNname">
+                    <div id="lastNameErrorBox"></div>
+                </div>
+            </div>
+            <!-- email container -->
+            <div class="email-container">
+                <label for="Email">Email Address</label>
+                <input type="email" name="Email" id="idMail">
+                <div id="mailIdErrorBox"></div>
+            </div>
+            <!-- number container -->
+            <div class="number-container">
+                <label for="Contact Number">Contact Number</label>
+                <input type="tel" name="Contact Number" id="idNumber" >
+                <div id="phoneNumberErrorBox"></div>
+            </div>
+            <!-- pincode container -->
+            <div class="pincode-container">
+                <label for="Pin Code">Pin Code</label>
+                <input type="text" name="Pin Code" id="idPinCode">
+                <div id="pinCodeErrorBox"></div>
+            </div>
+            <h3 class="payment-title">PAYMENT DETAILS</h3>
+            <div class="card-container">
+                <label for="Card Number">Card Number</label>
+                <input type="text" name="card number" id="idCardNumber">
+                <div id="cardNumberErrorbox"></div>
+            </div>
+            <!-- card details container -->
+            <div class = "cardexpiry-cvv-container">
+                <div class="expiry-container">
+                    <label for="Card Year">Card Expiry (Year)</label>
+                    <input type="text" name="card year" id="idCardExpiryYear">
+                    <div id="cardExpiryErrorBox"></div>
+                </div>
+                <!-- cvv container -->
+                <div class="cvv-container">
+                    <label for="CVV">CVV</label>
+                    <input type="text" name="cvv" id="idCvv">
+                    <div id="cvvErrorBox"></div><br>
+
+                </div>
+            </div>
+            <button id="btn" onclick="return validate()">COMPLETE PAYMENT</button>
+        </form>
+    </div>
+    <script src="js/scripts.js">
+        
+    </script>
+</body>
+
+</html>
+
