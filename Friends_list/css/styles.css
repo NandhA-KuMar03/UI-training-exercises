@@ -1,10 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Styles for title */
-.title_container{
+header{
     padding: 30px;
     margin: 0 auto 55px;
     background-color: #372063;
@@ -40,6 +41,7 @@
 }
 .details-container{
     display: flex;
+    row-gap: 0.2em;
     justify-content: center;
     flex-direction: column;
     margin: 0 17px;
