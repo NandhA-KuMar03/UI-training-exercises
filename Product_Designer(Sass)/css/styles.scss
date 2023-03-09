@@ -1,0 +1,218 @@
+@mixin devices ($breakpoint) { 
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+.mail{
+    margin: 0 12% 125px 0;
+    padding: 10px;
+    font-weight: 600;
+    text-align: end;
+    font-size: 30px;
+}
+nav{
+    @include devices(mobile){
+        display: none;
+    }
+}
+.header_container{
+    display: flex;
+    flex-direction: column;
+    margin: 70px auto 175px;
+    .developer_details{
+        text-align: center;
+        font-size: 55px;
+        @include devices(mobile){
+            display: block;
+        }
+        .developer_firstname{
+            font-weight: 300;
+            font-size: 145px;
+            @include devices(mobile){
+                font-size: 55px;
+            }
+        }
+        .developer_lastname{
+            font-weight: 300;
+            font-size: 145px;
+            @include devices(mobile){
+                font-weight: 700;
+                font-size: 55px;
+            }
+        }
+        h6{
+            display: none;
+            @include devices(mobile){
+                display: block;
+                font-size: 12px;
+            }
+        }
+        h5{
+            color: #cecece;
+            @include devices(mobile){
+                font-size: 27px;
+            }
+        }
+        .developer_designation{
+            color: #4990e2;
+        }
+
+    }
+    @include devices(mobile){
+        display: flex;
+        row-gap: 1em;
+        margin: 100px auto;
+        width: 90%;
+    }   
+}
+.parent_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto auto 100px;
+    width: 80%;
+    .flexbox_images{
+        margin-bottom: 30px;
+        width: 30%;
+        img{
+            width: 100%;
+        }
+        @include devices(mobile){
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+    img{
+        max-height: 100%;
+        min-width: 100%;
+        @include devices(mobile){
+            max-height: 100%;
+            min-width: 100%;  
+        }
+    }
+    @include devices(mobile){
+        margin-bottom: 30px;
+        padding: 20px;
+        width: 100%;
+    }
+}
+.logos_title{
+    margin-bottom: 65px;
+    text-align: center;
+    font-size: 25px;
+}
+.section_container{
+    display: flex;
+    margin: auto auto 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2em;
+    width: 65%;
+    div{
+        width: 10%;
+        text-align: center;
+        @include devices(mobile){
+            width: 35%;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    .image_resize{
+        margin-left: 20px;
+        max-width: 70%;
+        text-align: center;
+        @include devices(mobile){
+            margin-left: 15px;
+        }
+    }
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5em;
+    margin-bottom: 180px;
+    text-align: center;
+    .line_container{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between;
+        margin: auto;
+        width: 20%;
+        div{
+            border-bottom: 1px solid #ffffff;
+        }
+        .line1{
+            width: 11%;
+        }
+        .line2{
+            margin-left: 40px;
+            width: 75%;
+            @include devices(mobile){
+                margin-left: 10px;
+                width: 74%;
+            }
+        }
+        @include devices(mobile){
+            width: 40%;
+        }
+    }
+    .icons_container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        width: 25%;
+        i{
+            font-size: 35px;
+            @include devices(mobile){
+                font-size: 21px;
+            }
+        }
+        .icons_border{
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            @include devices(mobile){
+                padding: 8px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        @include devices(mobile){
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+    p{
+        font-size: 20px;
+        font-weight: 600;
+        @include devices(mobile){
+            font-size: 25px;
+        }
+    }
+
+
+}
