@@ -14,16 +14,18 @@ img{
     width: 37%;
     margin: 15px auto 0;
 }
+/* button in normal state and active state styles */
 .normal-state{
     padding: 10px 25px;
     margin: 0 5px;
     border-radius: 10px 10px 0 0;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
 }
 .active{
-    background-color: rgb(0,28,114);
+    background-color: #001c72;
 }
+/* Main container which holds the three tabs */
 .parent{
     padding: 20px;
     width: 37%;
@@ -32,6 +34,7 @@ img{
     overflow: scroll;
     box-shadow: 0 3px 10px #00000033;
 }
+/* The content on the about us page */
 .about-us-description{
     padding: 10px;
     font-size: 14px;
@@ -41,27 +44,21 @@ img{
 .about-us-image-container{
     padding: 10px;
 }
-
-.accordion-container{
-    display: flex;
-    flex-direction: column;
+.ui-accordion .ui-accordion-header{
+    background: #808eba;
+    color: #ffffff;
 }
-.accordion-container div{
-    margin-bottom: 10px;
+.ui-accordion .ui-accordion-content{
+    padding: 1.2em;
 }
-.acc-slide-down{
-    padding: 10px;
-    color: white;
-    letter-spacing: 1px;
-    background-color: #808eb9;
-}
+/* The content on the accordion tabs */
 .accordion-para{
-    padding: 15px;
-    font-size: 13px;
     font-weight: 300;
     line-height: 1.5em;
     border: 1px solid #808eb9;
-}
+} 
+
+/* The third page locations  */
 .locations-table{
     width: 100%;
     border-spacing: 0 10px;
@@ -71,9 +68,11 @@ img{
     font-size: 12px;
     font-weight: 300;
 }
+/* Flag image on the first column */
 .locations-table img{
     width: 90%;
 }
+/* Different widths on the location table */
 .locations-table tr td:nth-child(1){
     width: 12%;
 }
@@ -81,10 +80,10 @@ img{
     width: 27%;
 }
 .locations-table tr:nth-child(odd) {
-    background-color: rgb(238,238,238);
+    background-color: #eeeeee;
 }
 .locations-table tr:nth-child(even){
-    background-color: rgb(242,217,247);
+    background-color: #f2d9f7;
 }
 .locations-table tr td:nth-last-child(1){
     text-align: right;
