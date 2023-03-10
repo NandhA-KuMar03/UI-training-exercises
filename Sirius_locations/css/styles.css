@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 100%;
+}
+.image-container{
+    width: 20%;
+    margin: -65px auto;
+}
+.button-container{
+    width: 37%;
+    margin: 15px auto 0;
+}
+.normal-state{
+    padding: 10px 25px;
+    margin: 0 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: black;
+    color: white;
+}
+.active{
+    background-color: rgb(0,28,114);
+}
+.parent{
+    padding: 20px;
+    width: 37%;
+    margin: auto;
+    max-height: 60vh;
+    overflow: scroll;
+    box-shadow: 0 3px 10px #00000033;
+}
+.about-us-description{
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+.about-us-image-container{
+    padding: 10px;
+}
+
+.accordion-container{
+    display: flex;
+    flex-direction: column;
+}
+.accordion-container div{
+    margin-bottom: 10px;
+}
+.acc-slide-down{
+    padding: 10px;
+    color: white;
+    letter-spacing: 1px;
+    background-color: #808eb9;
+}
+.accordion-para{
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5em;
+    border: 1px solid #808eb9;
+}
+.locations-table{
+    width: 100%;
+    border-spacing: 0 10px;
+}
+.locations-table tr td{
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 300;
+}
+.locations-table img{
+    width: 90%;
+}
+.locations-table tr td:nth-child(1){
+    width: 12%;
+}
+.locations-table tr td:nth-child(2){
+    width: 27%;
+}
+.locations-table tr:nth-child(odd) {
+    background-color: rgb(238,238,238);
+}
+.locations-table tr:nth-child(even){
+    background-color: rgb(242,217,247);
+}
+.locations-table tr td:nth-last-child(1){
+    text-align: right;
+}
