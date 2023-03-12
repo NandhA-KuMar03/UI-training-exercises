@@ -158,6 +158,9 @@ footer h4, footer h5{
     }
 }
 @media only screen and (max-width: 767px) {
+    header{
+        padding: 17px 5%;
+    }
     header h3{
         width: 100%;
     }
