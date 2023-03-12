@@ -21,7 +21,7 @@ $(document).ready(function () {
             let $videoSrc = $("<video></video>").attr("controls" , "controls");
             $videoSrc.attr("src" , video.videoUrl);
             $videoSrc.attr("poster" , "images/thumbnail.png");
-            let $hrLine = $("<hr/>");
+            let $hrLine = $("<div>").addClass("divider-left-container");
 
             // Adding title and description in the left container
             $title = $(".title").text(video.title);
@@ -31,7 +31,6 @@ $(document).ready(function () {
             let $commentsContainer = $(".comments-container");
             // Iterating through the array of comments in video function and printing image, name and comment
             $.each(video.comments , function(k,element){
-                console.log();
                 let $singleComment = $("<div>").addClass("single-comment");
                 let $commentImageContainer = $("<div>").addClass("comment-image-container");
 
