@@ -10,69 +10,108 @@ img{
     width: 20%;
     margin: -65px auto;
 }
-.button-container{
-    width: 37%;
-    margin: 15px auto 0;
+body{
+    background-color: rgb(245 , 245, 245);
 }
-/* button in normal state and active state styles */
-.normal-state{
-    padding: 10px 25px;
-    margin: 0 5px;
-    border-radius: 10px 10px 0 0;
-    background-color: #000000;
-    color: #ffffff;
+.ui-widget.ui-widget-content{
+    margin-top: 10px;
+    border: 0;
 }
-.active{
-    background-color: #001c72;
-}
-/* Main container which holds the three tabs */
-.parent{
-    padding: 20px;
+.ui-tabs{
     width: 37%;
     margin: auto;
-    max-height: 60vh;
-    overflow: scroll;
-    box-shadow: 0 3px 10px #00000033;
+    border: 0;
+    background: rgb(245 , 245, 245);
 }
-/* The content on the about us page */
-.about-us-description{
-    padding: 10px;
-    font-size: 14px;
+
+/*First tab about us*/
+#tabs-1 p{
+    padding: 8px;
+    font-size: 13.5px;
     font-weight: 300;
     line-height: 1.4;
 }
 .about-us-image-container{
     padding: 10px;
 }
+/*Second page for solutions*/
+.ui-widget-header{
+    border: 0;
+    background: #0000;
+}
+.ui-tabs .ui-tabs-nav{
+    margin: 0 20px;
+    background: rgb(245 , 245, 245);
+}
+.ui-tabs .ui-tabs-nav li{
+    margin-right: 13px;
+    padding: 5px 15px;
+}
+.ui-tabs .ui-tabs-panel{
+    max-height: 59vh;
+    overflow: scroll;
+    background: white;
+    box-shadow: 0 3px 10px #00000033;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active{
+    padding: 5px 15px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background: black;
+    color: white;
+}
+.ui-state-default a, .ui-state-default a:visited{
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+/*Second page for solutions page*/
+.ui-widget .ui-widget{
+    height: 100vh;
+}
+.ui-state-active, .ui-widget-content .ui-state-active{
+    background: #001c72;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{
+    color: white;
+}
 .ui-accordion .ui-accordion-header{
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 0;
     background: #808eba;
     color: #ffffff;
 }
 .ui-accordion .ui-accordion-content{
-    padding: 1.2em;
-}
-/* The content on the accordion tabs */
-.accordion-para{
+    font-size: 12px;
     font-weight: 300;
-    line-height: 1.5em;
-    border: 1px solid #808eb9;
-} 
+    margin-bottom: 10px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+    border-bottom-left-radius: 0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{
+    border-bottom-right-radius: 0;
+}
 
-/* The third page locations  */
+
+/* The third page locations   */
 .locations-table{
     width: 100%;
     border-spacing: 0 10px;
 }
 .locations-table tr td{
-    padding: 8px 20px;
+    padding: 5px 20px;
     font-size: 12px;
     font-weight: 300;
 }
-/* Flag image on the first column */
+/* Flag image on the first column  */
 .locations-table img{
     width: 90%;
 }
-/* Different widths on the location table */
+/* Different widths on the location table  */
 .locations-table tr td:nth-child(1){
     width: 12%;
 }

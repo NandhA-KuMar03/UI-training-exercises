@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+        <link href="css/styles.css" rel = "stylesheet">
+        <title>Sirius Locations</title>
+    </head>
+    <body>
+        <!-- HEader part -->
+        <header>
+            <div class="image-container">
+                <img src="assets/images/Sirius_CDW_Cobranded_PMS2747.svg" alt = "Sirius logo image">
+            </div>
+        </header>
 
+        <!-- Jquery component Tabs -->
+        <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">ABOUT US</a></li>
+              <li><a href="#tabs-2">SOLUTIONS</a></li>
+              <li><a href="#tabs-3">LOCATIONS</a></li>
+            </ul>
 
+            <!-- About us TAb -->
+            <div id="tabs-1">
+              <p>Sirius is a national integrator of technology-based business solutions that span the enterprise, including the data center and lines of business. Built on products and services from the world's top technology companies, Sirius solutions are installed, configured and supported by our dedicated teams of highly certified experts. With the right people and the right partners, Sirius focuses on solutions that will help you manage your operations, optimize your IT, secure it all, and transform your business. We require our teams to be certified in multiple disciplines and products, so they can help you get from the high-level architecture of a solution all the way down to the technical configuration and implementation of point-products. Since its founding in 1980, Sirius has grown to be one of the largest IT solutions integrators in the U.S. Today, Sirius offers integrated, multivendor technology solutions that meet the requirements of the full range of organizations, from small businesses with fewer than 500 employees to large enterprises with thousands of employees and hundreds of locations.</p>
+              <div class="about-us-image-container">
+                <img src="assets/images/aboutUs.png" alt="About us image"/>
+              </div>
+            </div>  
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel = "stylesheet">
-    <title>Sirius Locations</title>
-</head>
-<body>
-    <header>
-        <div class="image-container">
-            <img src="assets/images/Sirius_CDW_Cobranded_PMS2747.svg" alt = "Sirius logo image">
-        </div>
-    </header>
-    <div class="button-container">
-        <button id="aboutUsButton" class="normal-state" selected>ABOUT US</button>
-        <button id="solutionButton" class="normal-state">SOLUTIONS</button>
-        <button id="locationButton" class="normal-state">LOCATIONS</button>
-    </div>
+            <!-- Accordion tab Jquery UI component -->
+            <div id="tabs-2">
+                <div id="accordion">
+                    <h3>DIGITAL EXPERIENCE</h3>
+                    <div>
+                      <p>
+                        At Sirius, we help our clients improve their operational efficiencies, increase satisfaction and brand loyalty, and drive improved business outcomes by creating a seamless digital experience. The Sirius Digital Experience (DX) practice encompasses all the components for building successful Web Content Management and Digital Asset Management solutions with our staff. The Sirius DX team is made up of qualified information and software architects, UI/UX designers, and developers who possess both industry knowledge and extensive technical background in digital solutions across a variety of platforms and devices. Our experts think out-side the box to best design and develop solutions that ensure a better user experience and value based upon your specific needs and business objectives.
+                      </p>
+                    </div>
 
-    <div class="parent">
-    <!-- <div id="accordion"> -->
-  </div> 
+                    <h3>INFORMATION TECHNOLOGY</h3>
+                    <div>
+                        <p>
+                        Information technology (IT) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data. Typically, IT is used in the context of business operations, as opposed to technology used for personal or entertainment purposes. The commercial use of IT encompasses both computer technology and telecommunications. The Harvard Business Review coined the term information technology to make a distinction between purpose-built machines designed to perform a limited scope of functions, and general-purpose computing machines that could be programmed for various tasks. As the IT industry evolved from the mid-20th century, computing capability increased, while device cost and energy consumption decreased, a cycle that continues today when new technologies emerge.
+                      </p>
+                    </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
- 
-    <script src="scripts/locations.js"></script>
-    <script src="scripts/about.js"></script>
-    <script src = "scripts/scripts.js">
+                    <h3>MANAGED SERVICES</h3>
+                    <div>
+                    <p>
+                        Managed services is the practice of outsourcing the responsibility for maintaining, and anticipating need for, a range of processes and functions, ostensibly for the purpose of improved operations and reduced budgetary expenditures through the reduction of directly-employed staff.
+                      </p>
+                    </div>
 
-    </script>
-</body>
+                    <h3>QUALITY ASSURANCE</h3>
+                    <div>
+                    <p>
+                        Quality assurance (QA) is the term used in both manufacturing and service industries to describe the systematic efforts taken to ensure that the product(s) delivered to customer(s) meet with the contractual and other agreed upon performance, design, reliability, and maintainability expectations of that customer. The core purpose of Quality Assurance is to prevent mistakes and defects in the development and production of both manufactured products, such as automobiles and shoes, and delivered services, such as automotive repair and athletic shoe design. Assuring quality and therefore avoiding problems and delays when delivering products or services to customers is what ISO 9000 defines as that part of quality management focused on providing confidence that quality requirements will be fulfilled
+                    </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Locations Tab -->
+            <div id="tabs-3">
+
+            </div>
+          </div>
+
+    
+        <script src="scripts/locations.js"></script>
+        <script src = "scripts/scripts.js">
+
+        </script>
+    </body>
 </html>
